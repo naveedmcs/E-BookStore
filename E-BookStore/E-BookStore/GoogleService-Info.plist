@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>620953243361-q6n7cak4h3dnho36k9v731o7h5bfukkf.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.620953243361-q6n7cak4h3dnho36k9v731o7h5bfukkf</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>620953243361-ftkaon0vmdnvu6qf1635voj73n9ckqvi.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAwMV9C9OAUwzAuRxkbb9cTIm87WmbH3w8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>620953243361</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.e-sloutions.E-BookStore</string>
+	<key>PROJECT_ID</key>
+	<string>esolutionapps</string>
+	<key>STORAGE_BUCKET</key>
+	<string>esolutionapps.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:620953243361:ios:623e242233e370550931a0</string>
+	<key>DATABASE_URL</key>
+	<string>https://esolutionapps.firebaseio.com</string>
+</dict>
+</plist>
