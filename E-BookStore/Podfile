@@ -18,6 +18,14 @@ target 'E-BookStore' do
    # Optionally, include the Swift extensions if you're using Swift.
     pod 'FirebaseFirestoreSwift'
 
+pod 'UITextView+Placeholder'
+pod 'DropDown'
+pod 'IQKeyboardManagerSwift'
+pod 'Kingfisher'
+pod 'JGProgressHUD'
+
+pod 'SwiftMessages'
+
   end
 
 end

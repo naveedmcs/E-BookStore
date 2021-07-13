@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Account TypeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="E_BookStore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AccountTypeVC" customModule="E_BookStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -55,20 +55,59 @@
             </objects>
             <point key="canvasLocation" x="31.884057971014496" y="71.651785714285708"/>
         </scene>
-        <!--View Controller-->
+        <!--CategoriesVC-->
         <scene sceneID="2zN-ac-Tza">
             <objects>
-                <viewController id="SAC-7o-gCy" sceneMemberID="viewController">
+                <viewController id="SAC-7o-gCy" customClass="CategoriesVC" customModule="E_BookStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OBd-sT-kcJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z6U-Yd-Au9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="g31-p0-24x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g31-p0-24x" firstAttribute="bottom" secondItem="Z6U-Yd-Au9" secondAttribute="bottom" id="dz4-6C-eqJ"/>
+                            <constraint firstItem="Z6U-Yd-Au9" firstAttribute="leading" secondItem="g31-p0-24x" secondAttribute="leading" id="ezZ-Zv-U0V"/>
+                            <constraint firstItem="g31-p0-24x" firstAttribute="trailing" secondItem="Z6U-Yd-Au9" secondAttribute="trailing" id="kmA-ic-eoo"/>
+                            <constraint firstItem="Z6U-Yd-Au9" firstAttribute="top" secondItem="g31-p0-24x" secondAttribute="top" id="sOd-Wi-N5f"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s4X-8Q-JJI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="741" y="72"/>
+        </scene>
+        <!--ProductsVC-->
+        <scene sceneID="tCe-EY-6xk">
+            <objects>
+                <viewController id="ppd-Qk-ivz" customClass="ProductsVC" customModule="E_BookStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X5r-x2-GLG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dhx-bC-44Q">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o1S-fN-X1B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="o1S-fN-X1B" firstAttribute="trailing" secondItem="Dhx-bC-44Q" secondAttribute="trailing" id="GMK-6a-YKc"/>
+                            <constraint firstItem="o1S-fN-X1B" firstAttribute="bottom" secondItem="Dhx-bC-44Q" secondAttribute="bottom" id="k8F-y8-q2g"/>
+                            <constraint firstItem="Dhx-bC-44Q" firstAttribute="top" secondItem="o1S-fN-X1B" secondAttribute="top" id="nEb-QX-zCs"/>
+                            <constraint firstItem="Dhx-bC-44Q" firstAttribute="leading" secondItem="o1S-fN-X1B" secondAttribute="leading" id="zpe-7U-cF4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a2n-z6-OBo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1423" y="72"/>
         </scene>
     </scenes>
     <resources>
