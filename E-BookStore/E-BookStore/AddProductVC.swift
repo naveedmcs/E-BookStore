@@ -2,28 +2,27 @@
 //  AddProductVC.swift
 //  E-BookStore
 //
-//  Created by Naveed-IOS on 13/07/2021.
+//  Created by Naveed-IOS on 14/07/2021.
 //
 
 import UIKit
 
 class AddProductVC: UIViewController {
 
+    //MARK:- outlets
+    //MARK:- let & var
+    //MARK:- view life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK:- actions
+    @IBAction private func categoryBtnTapped(sender: UIButton) {
+        let vc = UIStoryboard.get(.main).instantiateViewController(withIdentifier: CategoriesVC.className) as! CategoriesVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    */
+
 
 }

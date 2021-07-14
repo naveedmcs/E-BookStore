@@ -9,21 +9,56 @@ import UIKit
 
 class ProductsVC: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+    //MARK:- outlets
+    @IBOutlet weak private var tableView: UITableView?
+    
+    //MARK:- let & var
+   
+    private var products = [ProductModel]()
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    //MARK:- view life cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.title = "Products"
+        self.setupTableView()
+     
     }
-    */
-
+    
+//MARK:- private methods
+   private func setupTableView()  {
+        self.tableView?.registerCell(id: ProductTableViewCell.className)
+        self.products = ProductModel.listData
+        self.tableView?.reloadData()
+    }
+    
+    //MARK:- actions
+    @IBAction private func addBtnTapped(sender: UIButton) {
+        let vc = UIStoryboard.get(.main).instantiateViewController(withIdentifier: AddProductVC.className) as! AddProductVC
+        self.navigationController?.pushViewController( vc, animated: true)
+    }
 }
+
+//MARK:- tableview Data source
+extension ProductsVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.products.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.className) as! ProductTableViewCell
+        cell.updateCell(object: products[indexPath.row])
+        return cell
+    }
+}
+
+
+//MARK:- tableview Delegate
+extension ProductsVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let vc = UIStoryboard.get(.main).instantiateViewController(identifier: ProductDetailVC.className) as! ProductDetailVC
+//        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+}
+

@@ -50,3 +50,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+
+//
+//extension SceneDelegate {
+//    static var rootController: 
+//}
