@@ -44,13 +44,11 @@ extension AppDelegate {
     func loadAppDataOnDidFinishLaunch()  {
     
        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.backgroundColor = .white
 //        IQKeyboardManager.shared.enable = true
 //        IQKeyboardManager.shared.enableAutoToolbar = true
 //        IQKeyboardManager.shared.previousNextDisplayMode = .alwaysShow
        
-       navigateToRootControllerMainTabbar()
+      
         
       
        
@@ -63,26 +61,3 @@ extension AppDelegate {
     
  
 }
-
-//Mark:-  root controllers
-extension AppDelegate {
-    
-   
-    
-    func navigateToRootControllerLoginVC()  {
-        let s = UIStoryboard.get(.main)
-        let vc = s.instantiateViewController(identifier: LoginVC.className)
-        let nvc = UINavigationController(rootViewController: vc)
-        self.window?.rootViewController = nvc
-        self.window?.makeKeyAndVisible()
-    }
-    
-    func navigateToRootControllerMainTabbar() {
-        let s = UIStoryboard.get(.main)
-        let vc = s.instantiateViewController(identifier: AdminTabbarController.className)
-        self.window?.rootViewController = vc
-        self.window?.makeKeyAndVisible()
-    }
-    
-}
-

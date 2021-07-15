@@ -34,6 +34,6 @@ class LoginVC: UIViewController {
 extension LoginVC {
     func gotoAdminTabbarController() {
         print("Hello world")
-        UIApplication.getAppDelegate()?.navigateToRootControllerMainTabbar()
+        UIApplication.getSceneDelegate()?.navigateToRootControllerMainTabbar()
     }
 }

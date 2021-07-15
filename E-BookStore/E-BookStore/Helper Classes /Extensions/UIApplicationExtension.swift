@@ -25,6 +25,24 @@ extension UIApplication {
 
 
 
+extension UIApplication {
+     static func getSceneDelegate()-> SceneDelegate? {
+        if let delegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+            return delegate
+        }
+        else {
+            
+            Logger.error(message: "SceneDelegate is nil")
+            return nil
+        }
+       
+    }
+    
+ 
+}
+
+
+
 
 
 extension UIWindow {
