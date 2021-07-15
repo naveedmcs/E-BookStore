@@ -13,7 +13,7 @@ struct ProductModel {
     enum statusType {
         case ReadyStock
         case outOFStock
-        case suspend = "Suspend"
+        case suspend
         
         var formattedString: String {
             switch self {
@@ -39,7 +39,7 @@ struct ProductModel {
 
 extension ProductModel {
     var priceFormatted: String {
-        return "\(price?.round(to: 1)) $"
+        return "\(price?.round(to: 1) ?? 0) $"
     }
     
     var stockFormatted: String {
@@ -49,10 +49,10 @@ extension ProductModel {
     
     static var listData : [ProductModel] {
         return [
-            ProductModel(name: "Book A", price: 10, stock: 10, status: .ReadyStock, category: "A"),
-            ProductModel(name: "Book B", price: 10, stock: 20, status: .ReadyStock, category: "B"),
-            ProductModel(name: "Book C", price: 10, stock: 30, status: .ReadyStock, category: "C"),
-            ProductModel(name: "Book D", price: 10, stock: 35, status: .ReadyStock, category: "D")
+            ProductModel(name: "Book A", price: 30, stock: 10, status: .ReadyStock, category: "A"),
+            ProductModel(name: "Book B", price: 20.2, stock: 20, status: .ReadyStock, category: "B"),
+            ProductModel(name: "Book C", price: 10.24, stock: 30, status: .ReadyStock, category: "C"),
+            ProductModel(name: "Book D", price: 55.3434, stock: 35, status: .ReadyStock, category: "D")
         ]
     }
 }

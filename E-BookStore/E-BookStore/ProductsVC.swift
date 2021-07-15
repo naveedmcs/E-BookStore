@@ -22,6 +22,7 @@ class ProductsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Products"
+        self.navigationController?.navigationBar.isHidden = false
         self.setupTableView()
      
     }
@@ -56,8 +57,8 @@ extension ProductsVC: UITableViewDataSource {
 //MARK:- tableview Delegate
 extension ProductsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = UIStoryboard.get(.main).instantiateViewController(identifier: ProductDetailVC.className) as! ProductDetailVC
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = UIStoryboard.get(.main).instantiateViewController(identifier: ProductDetailVC.className) as! ProductDetailVC
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
 }

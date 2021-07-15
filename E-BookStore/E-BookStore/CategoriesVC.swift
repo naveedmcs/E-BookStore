@@ -18,8 +18,9 @@ class CategoriesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Categorie"
-        // Do any additional setup after loading the view.
+        self.navigationItem.title = "Categories"
+        self.tableView?.separatorStyle = .singleLine
+        self.tableView?.tableFooterView = UIView()
     }
     
 

@@ -105,7 +105,7 @@ extension Encodable {
        
        guard let data = try? JSONEncoder().encode(self) else { return  }
         debugPrint("-------- Request Params----------")
-        debugPrint(data.prettyPrintedJSONString ?? "")
+       // debugPrint(data.prettyPrintedJSONString ?? "")
         debugPrint("-------- End Request Params----------")
     
     }

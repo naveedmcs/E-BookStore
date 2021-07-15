@@ -18,11 +18,13 @@ class LoginVC: UIViewController {
 
   //MARK:- actions
     @IBAction func loginBtnTapped(sender: UIButton) {
+        
         gotoAdminTabbarController()
     }
     
     @IBAction func registerBtnTapped(sender: UIButton) {
-        
+        let vc = UIStoryboard.get(.main).instantiateViewController(withIdentifier: RegisterCustomerVC.className) as! RegisterCustomerVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
 }
@@ -31,8 +33,7 @@ class LoginVC: UIViewController {
 //MARK:- navigation
 extension LoginVC {
     func gotoAdminTabbarController() {
-        let s = UIStoryboard(name: "Main", bundle: nil)
-        let vc = s.instantiateViewController(withIdentifier: "AdminTabbarController") as! AdminTabbarController
-        
+        print("Hello world")
+        UIApplication.getAppDelegate()?.navigateToRootControllerMainTabbar()
     }
 }
