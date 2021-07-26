@@ -1,5 +1,5 @@
 //
-//  RegisterCustomerVC.swift
+//  AdminOrdersVC.swift
 //  E-BookStore
 //
 //  Created by Naveed-IOS on 14/07/2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterCustomerVC: UIViewController {
+class AdminOrdersVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -105,7 +105,11 @@ extension Encodable {
        
        guard let data = try? JSONEncoder().encode(self) else { return  }
         debugPrint("-------- Request Params----------")
-       // debugPrint(data.prettyPrintedJSONString ?? "")
+        let jsonData = try! JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
+
+        if let jsonString = String(data: jsonData, encoding: .utf8) {
+            print(jsonString)
+        }
         debugPrint("-------- End Request Params----------")
     
     }

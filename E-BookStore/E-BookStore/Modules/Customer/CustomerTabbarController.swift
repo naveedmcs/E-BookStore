@@ -1,13 +1,13 @@
 //
-//  OrdersVC.swift
+//  CustomerTabbarController.swift
 //  E-BookStore
 //
-//  Created by Naveed-IOS on 14/07/2021.
+//  Created by Muhammad  Naveed on 18/07/2021.
 //
 
 import UIKit
 
-class OrdersVC: UIViewController {
+class CustomerTabbarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
